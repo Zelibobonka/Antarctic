@@ -1,0 +1,127 @@
+.form {
+  max-width: 403px;
+  padding: 43px 50px 53px;
+  background-color: $color-tangaroa;
+
+  @media (max-width: $vp-1023) {
+    max-width: none;
+    margin: 0 8px;
+  }
+
+
+  @media (max-width: $vp-767) {
+    margin: 0;
+    padding: 34px 30px 40px;
+  }
+
+  h2 {
+    margin: 0 0 27px;
+    font-size: 18px;
+    line-height: 150%;
+    font-weight: 500;
+    color: $color-alice-blue;
+
+    @media (max-width: $vp-767) {
+      line-height: 140%;
+      text-align: center;
+    }
+  }
+
+  input {
+    display: block;
+    width: 100%;
+    min-height: 43px;
+    margin-bottom: 20px;
+    padding: 11px 16px;
+    font-family: $ff-montserrat;
+    color: $color-tangaroa;
+    background-color: $color-alice-blue;
+    border: none;
+
+    &:hover {
+      opacity: 0.8;
+    }
+
+    &:active {
+      background-color: #bdbdbe;
+    }
+
+    &:disabled {
+      opacity: 0.5;
+    }
+
+    &::placeholder {
+      color: $color-tangaroa;
+    }
+  }
+}
+
+.form__fieldset {
+  margin: 0;
+  padding: 0;
+  border: none;
+}
+
+.form__checkbox {
+  position: relative;
+  min-height: 18px;
+  margin-bottom: 30px;
+
+  @media (max-width: $vp-1023) {
+    padding: 4px 0 3px;
+  }
+
+  @media (max-width: $vp-767) {
+    margin-bottom: 28px;
+    padding: 0;
+  }
+
+  label {
+    display: flex;
+    align-items: center;
+
+    &:hover {
+      opacity: 0.8;
+    }
+
+    &:active {
+      opacity: 0.6;
+    }
+  }
+}
+
+.form__mark-checkbox {
+  position: absolute;
+  content: "";
+  width: 18px;
+  height: 18px;
+  background-color: $color-alice-blue;
+
+  @media (max-width: $vp-767) {
+    width: 20px;
+    height: 20px;
+  }
+}
+
+.form__checkbox input:checked + .form__mark-checkbox {
+  background-image: url("../img/svg/checkbox.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.form__text {
+  display: block;
+  padding-left: 23px;
+  font-size: 10px;
+  line-height: 130%;
+  color: $color-alice-blue;
+
+  @media (max-width: $vp-767) {
+    padding-left: 28px;
+    line-height: 120%;
+  }
+}
+
+.form__button {
+  width: 100%;
+}

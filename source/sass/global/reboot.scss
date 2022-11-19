@@ -15,27 +15,27 @@ html {
   font-style: normal;
   font-weight: 400;
   font-size: $fz-default;
-  line-height: 24px;
-  font-family: $ff-placeholder;
-  color: $color-default-black;
+  line-height: 100%;
+  font-family: $ff-montserrat;
+  color: $color-tangaroa;
 
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  // оптимизация выравнивания шрифта относительно центра строки
   text-rendering: optimizeLegibility;
-  // если по прежнему есть проблемы с выравниванием
-  // https://transfonter.org/ - включите настройку https://prnt.sc/12rnt6g и переконвертируйте шрифт
+
+  @media (prefers-reduced-motion: no-preference) {
+    scroll-behavior: smooth;
+  }
 }
 
 body {
   width: 100%;
   height: 100%;
-
-  background-color: $color-default-white;
+  background-color: $color-alice-blue;
 }
 
 a {
-  color: $color-default-black;
+  color: $color-tangaroa;
   text-decoration: none;
 }
 
@@ -50,16 +50,10 @@ textarea {
   resize: none;
 }
 
-// chrome autofill background removal
-// если на проекте у инпутов используются разные цвета фонов\текста -
-// удалите это из глобала и используйте локально с нужными цветами
-// rgba не подойдет, сконвертируйте цвет в hex без прозрачности
-// если в стилях уже используется box-shadow есть другое решение -
-// задать к списку транзишенов `background-color 10000000s ease-out`
 input:-webkit-autofill {
-  box-shadow: inset 0 0 0 1000px $color-default-white;
+  box-shadow: inset 0 0 0 1000px $color-alice-blue;
 
-  -webkit-text-fill-color: $color-default-black;
+  -webkit-text-fill-color: $color-tangaroa;
 }
 
 // firefox placeholder \ invalid fix + ios bdrs

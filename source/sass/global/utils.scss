@@ -1,6 +1,17 @@
+:root {
+  --side-offset: calc(50vw - 580px);
+
+  @media (max-width: $vp-1249) {
+    --side-offset: 45px;
+  }
+
+  @media (max-width: $vp-767) {
+    --side-offset: 15px;
+  }
+}
+
 .wrapper {
   position: relative;
-
   display: flex;
   flex-direction: column;
   min-height: 100vh;
@@ -15,14 +26,6 @@
   main {
     flex-grow: 1;
   }
-}
-
-.rouble {
-  font-family: $ff-rouble;
-  /* stylelint-disable */
-  text-transform: lowercase !important;
-  font-weight: 400 !important;
-  /* stylelint-enable */
 }
 
 .visually-hidden {
@@ -40,28 +43,4 @@
 
   clip: rect(0 0 0 0);
   clip-path: inset(100%);
-}
-
-.scroll-lock-ios {
-  position: fixed;
-
-  overflow: hidden;
-}
-
-.scroll-lock {
-  overflow: hidden;
-}
-
-.no-scrollbar {
-  -ms-overflow-style: none;
-  scrollbar-width: none;
-
-  &::-webkit-scrollbar {
-    display: none;
-  }
-}
-
-.no-transition {
-  /* stylelint-disable-next-line */
-  transition: none !important;
 }

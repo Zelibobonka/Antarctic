@@ -1,0 +1,71 @@
+.feedback {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 555px;
+  padding: 50px calc(var(--side-offset) + 60px);
+  background-image: image-set(
+    url("../img/background/desktop/feedback.webp") 1x,
+    url("../img/background/desktop/feedback@2x.webp") 2x,
+    url("../img/background/desktop/feedback.jpg") 1x,
+    url("../img/background/desktop/feedback@2x.jpg") 2x,
+  );
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center 5%;
+
+  @media (max-width: $vp-1023) {
+    display: block;
+    padding: 74px calc(var(--side-offset) + 129px) 98px;
+    background-image: image-set(
+      url("../img/background/tablet/feedback.webp") 1x,
+      url("../img/background/tablet/feedback@2x.webp") 2x,
+      url("../img/background/tablet/feedback.jpg") 1x,
+      url("../img/background/tablet/feedback@2x.jpg") 2x,
+    );
+    background-position: center;
+  }
+
+  @media (max-width: $vp-767) {
+    padding: 39px var(--side-offset) 65px;
+  }
+}
+
+.feedback__text-holder {
+  max-width: 520px;
+  padding-top: 20px;
+
+  @media (max-width: $vp-1023) {
+    text-align: center;
+    max-width: none;
+  }
+
+  h2 {
+    @include title-large-dark (20px, 14px, 13px);
+  }
+
+  p {
+    @include description-medium (20px, 60px, 40px);
+    max-width: 355px;
+    font-size: 18px;
+
+    @media (max-width: $vp-1023) {
+      max-width: none;
+      margin: 0 34px 52px;
+    }
+
+    @media (max-width: $vp-767) {
+      margin: 0 14px 34px;
+      font-size: 16px;
+      line-height: 140%;
+    }
+  }
+
+  br {
+    display: none;
+
+    @media (max-width: $vp-767) {
+      display: block;
+    }
+  }
+}
