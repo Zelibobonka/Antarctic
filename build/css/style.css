@@ -920,6 +920,10 @@ button,
     margin-right: 15px;
   }
 
+  .logo--footer {
+    margin-right: 0;
+  }
+
   .logo svg {
     width: 38px;
     height: 20px;

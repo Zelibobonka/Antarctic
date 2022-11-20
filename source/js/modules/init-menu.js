@@ -11,12 +11,25 @@ const breakpoint = window.matchMedia('(max-width:767px)');
 const initMenu = () => {
   const breakpointChecker = () => {
     if (breakpoint.matches) {
-      menu.classList.remove('main-header--open');
-      nav.style.display = 'none';
-      buttonClose.style.display = 'none';
-      buttonOpen.style.display = 'block';
-      logo.classList.remove('logo--menu');
 
+      const doIfNotNull = (elem, func) => {
+        if (elem === null) {
+          return;
+        }
+        func(elem);
+      };
+
+      doIfNotNull(menu, (m) => m.classList.remove('main-header--open'));
+      doIfNotNull(nav, (m) => {
+        m.style.display = 'none';
+      });
+      doIfNotNull(buttonClose, (m) => {
+        m.style.display = 'none';
+      });
+      doIfNotNull(buttonOpen, (m) => {
+        m.style.display = 'block';
+      });
+      doIfNotNull(logo, (m) => m.classList.remove('logo--menu'));
 
       buttonOpen.addEventListener('click', function (e) {
         e.preventDefault();
@@ -49,8 +62,10 @@ const initMenu = () => {
         close();
       });
 
-      overlay.addEventListener('click', () => {
-        close();
+      doIfNotNull(overlay, (o) => {
+        o.addEventListener('click', () => {
+          close();
+        });
       });
     } else {
       logo.classList.add('logo--menu');

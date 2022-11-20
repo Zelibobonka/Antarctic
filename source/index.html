@@ -7,17 +7,20 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description" content="Описание проекта">
   <title>Круизы в Антарктику </title>
+  <link rel="preload" href="css/style.min.css" as="style">
+  <link rel="preload" href="js/main.min.js" as="script">
+  <link rel="preload" href="fonts/montserrat-bold.woff2" as="font">
+  <link rel="preload" href="fonts/montserrat-medium.woff2" as="font">
+  <link rel="preload" href="fonts/montserrat-regular.woff2" as="font">
+  <link rel="preload" href="fonts/montserrat-semibold.woff2" as="font">
   <link rel="stylesheet" href="css/style.min.css">
-  <script src="https://api-maps.yandex.ru/2.1/?apikey=9fb6b18c-6512-4709-9d4c-71752e58d037&lang=ru_RU"
-    type="text/javascript">
-    </script>
 </head>
 
 <body>
   <div class="wrapper">
     <header class="main-header main-header--open" data-main-header>
       <div class="main-header__menu">
-        <a class="logo logo--menu" href="#" data-logo-header>
+        <a class="logo logo--menu" href="#" aria-label="Логотип." data-logo-header>
           <svg width="70" height="38">
             <use xlink:href="img/sprite.svg#main-logo"></use>
           </svg>
@@ -100,8 +103,8 @@
               <div class="product-card__img-holder">
                 <picture>
                   <source type="image/webp" srcset="img/product/product-1.webp 1x, img/product/product-1@2x.webp 2x">
-                  <img src="img/product/product-1.jpg" srcset="img/product/product-1@2x.jpg 2x" width="260" height="386"
-                    alt="Круиз Астория." />
+                  <img src="img/product/product-1.jpg" srcset="img/product/product-1@2x.jpg 2x" loading="lazy"
+                    width="260" height="386" alt="Круиз Астория." />
                 </picture>
               </div>
               <h3>Круиз "Астория"</h3>
@@ -126,8 +129,8 @@
               <div class="product-card__img-holder">
                 <picture>
                   <source type="image/webp" srcset="img/product/product-1.webp 1x, img/product/product-1@2x.webp 2x">
-                  <img src="img/product/product-1.jpg" srcset="img/product/product-1@2x.jpg 2x" width="260" height="386"
-                    alt="Круиз Астория." />
+                  <img src="img/product/product-1.jpg" srcset="img/product/product-1@2x.jpg 2x" loading="lazy"
+                    width="260" height="386" alt="Круиз Астория." />
                 </picture>
               </div>
               <h3>Круиз “Элайн”</h3>
@@ -152,8 +155,8 @@
               <div class="product-card__img-holder">
                 <picture>
                   <source type="image/webp" srcset="img/product/product-2.webp 1x, img/product/product-2@2x.webp 2x">
-                  <img src="img/product/product-2.jpg" srcset="img/product/product-2@2x.jpg 2x" width="260" height="386"
-                    alt="Круиз Астория." />
+                  <img src="img/product/product-2.jpg" srcset="img/product/product-2@2x.jpg 2x" loading="lazy"
+                    width="260" height="386" alt="Круиз Астория." />
                 </picture>
               </div>
               <h3>Круиз "Атлантис"</h3>
@@ -178,8 +181,8 @@
               <div class="product-card__img-holder">
                 <picture>
                   <source type="image/webp" srcset="img/product/product-3.webp 1x, img/product/product-3@2x.webp 2x">
-                  <img src="img/product/product-3.jpg" srcset="img/product/product-3@2x.jpg 2x" width="260" height="386"
-                    alt="Круиз Астория." />
+                  <img src="img/product/product-3.jpg" srcset="img/product/product-3@2x.jpg 2x" loading="lazy"
+                    width="260" height="386" alt="Круиз Астория." />
                 </picture>
               </div>
               <h3>Круиз "Одиссей"</h3>
@@ -204,8 +207,8 @@
               <div class="product-card__img-holder">
                 <picture>
                   <source type="image/webp" srcset="img/product/product-4.webp 1x, img/product/product-4@2x.webp 2x">
-                  <img src="img/product/product-4.jpg" srcset="img/product/product-4@2x.jpg 2x" width="260" height="386"
-                    alt="Круиз Астория." />
+                  <img src="img/product/product-4.jpg" srcset="img/product/product-4@2x.jpg 2x" loading="lazy"
+                    width="260" height="386" alt="Круиз Астория." />
                 </picture>
               </div>
               <h3>Круиз "Олимпия"</h3>
@@ -230,8 +233,8 @@
               <div class="product-card__img-holder">
                 <picture>
                   <source type="image/webp" srcset="img/product/product-5.webp 1x, img/product/product-5@2x.webp 2x">
-                  <img src="img/product/product-5.jpg" srcset="img/product/product-5@2x.jpg 2x" width="260" height="386"
-                    alt="Круиз Астория." />
+                  <img src="img/product/product-5.jpg" srcset="img/product/product-5@2x.jpg 2x" loading="lazy"
+                    width="260" height="386" alt="Круиз Астория." />
                 </picture>
               </div>
               <h3>Круиз "Аврора"</h3>
@@ -256,8 +259,8 @@
               <div class="product-card__img-holder">
                 <picture>
                   <source type="image/webp" srcset="img/product/product-6.webp 1x, img/product/product-6@2x.webp 2x">
-                  <img src="img/product/product-6.jpg" srcset="img/product/product-6@2x.jpg 2x" width="260" height="386"
-                    alt="Круиз Астория." />
+                  <img src="img/product/product-6.jpg" srcset="img/product/product-6@2x.jpg 2x" loading="lazy"
+                    width="260" height="386" alt="Круиз Астория." />
                 </picture>
               </div>
               <h3>Круиз "Леонор"</h3>
@@ -282,8 +285,8 @@
               <div class="product-card__img-holder">
                 <picture>
                   <source type="image/webp" srcset="img/product/product-7.webp 1x, img/product/product-7@2x.webp 2x">
-                  <img src="img/product/product-7.jpg" srcset="img/product/product-7@2x.jpg 2x" width="260" height="386"
-                    alt="Круиз Астория." />
+                  <img src="img/product/product-7.jpg" srcset="img/product/product-7@2x.jpg 2x" loading="lazy"
+                    width="260" height="386" alt="Круиз Астория." />
                 </picture>
               </div>
               <h3>Круиз "Минион - 1"</h3>
@@ -317,11 +320,11 @@
           <fieldset class="form__fieldset">
             <legend class="visually-hidden">Ваши данные.</legend>
             <label class="visually-hidden" for="name">Ваше имя.</label>
-            <input type="text" id="name" name="name" placeholder="Имя" required>
+            <input type="text" id="name" name="name" placeholder="Имя" data-input required>
             <label class="visually-hidden" for="phone">Номер телефона.</label>
-            <input type="tel" id="phone" name="phone" placeholder="Телефон" required>
+            <input type="number" id="phone" name="phone" placeholder="Телефон" data-input required>
             <label class="visually-hidden" for="email">Ваш email.</label>
-            <input type="email" id="email" name="email" placeholder="Email" required>
+            <input type="email" id="email" name="email" placeholder="Email" data-input required>
             <div class="form__checkbox">
               <label>
                 <input class="visually-hidden" type="checkbox" name="personal-data" tabindex="-1" required checked>
@@ -350,7 +353,7 @@
     </main>
 
     <footer class="main-footer">
-      <a class="logo logo--footer" href="#">
+      <a class="logo logo--footer" href="#" aria-label="Логотип.">
         <svg width="70" height="38">
           <use xlink:href="img/sprite.svg#main-logo"></use>
         </svg>
@@ -403,7 +406,9 @@
       </div>
     </footer>
   </div>
-
+  <script src="https://api-maps.yandex.ru/2.1/?apikey=9fb6b18c-6512-4709-9d4c-71752e58d037&lang=ru_RU"
+    type="text/javascript">
+    </script>
   <script src="js/vendor.min.js"></script>
   <script src="js/main.min.js"></script>
 </body>
