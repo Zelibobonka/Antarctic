@@ -320,11 +320,12 @@
           <fieldset class="form__fieldset">
             <legend class="visually-hidden">Ваши данные.</legend>
             <label class="visually-hidden" for="name">Ваше имя.</label>
-            <input type="text" id="name" name="name" placeholder="Имя" data-input required>
+            <input type="text" id="name" name="name" placeholder="Имя" autocomplete="on" required>
             <label class="visually-hidden" for="phone">Номер телефона.</label>
-            <input type="number" id="phone" name="phone" placeholder="Телефон" data-input required>
+            <input type="tel" id="phone" name="phone" placeholder="Телефон" pattern="[0-9'+''('')']+$"
+              title="Используйте только цифры, '+()'" autocomplete="on" required>
             <label class="visually-hidden" for="email">Ваш email.</label>
-            <input type="email" id="email" name="email" placeholder="Email" data-input required>
+            <input type="email" id="email" name="email" placeholder="Email" autocomplete="on" required>
             <div class="form__checkbox">
               <label>
                 <input class="visually-hidden" type="checkbox" name="personal-data" tabindex="-1" required checked>
@@ -406,9 +407,7 @@
       </div>
     </footer>
   </div>
-  <script src="https://api-maps.yandex.ru/2.1/?apikey=9fb6b18c-6512-4709-9d4c-71752e58d037&lang=ru_RU"
-    type="text/javascript">
-    </script>
+  <script src="https://api-maps.yandex.ru/2.1/?apikey=9fb6b18c-6512-4709-9d4c-71752e58d037&lang=ru_RU"></script>
   <script src="js/vendor.min.js"></script>
   <script src="js/main.min.js"></script>
 </body>

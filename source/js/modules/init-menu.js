@@ -9,7 +9,7 @@ const navLink = document.querySelectorAll('[data-nav-link]');
 const breakpoint = window.matchMedia('(max-width:767px)');
 
 const initMenu = () => {
-  const breakpointChecker = () => {
+  const checkBreakpoint = () => {
     if (breakpoint.matches) {
 
       const doIfNotNull = (elem, func) => {
@@ -39,6 +39,7 @@ const initMenu = () => {
         logo.classList.add('logo--menu');
         overlay.classList.add('active');
         buttonClose.style.display = 'block';
+        buttonOpen.style.display = 'none';
         document.body.style.overflow = 'hidden';
       });
 
@@ -77,8 +78,8 @@ const initMenu = () => {
     }
   };
 
-  breakpoint.addListener(breakpointChecker);
-  breakpointChecker();
+  breakpoint.addEventListener('change', checkBreakpoint);
+  checkBreakpoint();
 };
 
 export {initMenu};

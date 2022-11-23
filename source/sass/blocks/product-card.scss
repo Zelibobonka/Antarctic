@@ -1,39 +1,57 @@
 .product-card {
   position: relative;
   height: 386px;
-  display: flex;
-  align-items: flex-end;
-  padding: 28px 22px 30px 25px;
+  padding: 28px 25px 35px 25px;
+  overflow: hidden;
+  transition: all 0.2s easy-in;
 
   @media (max-width: $vp-1023) {
-    padding: 27px 35px 25px;
+    padding: 27px 35px 35px;
   }
 
   @media (max-width: $vp-767) {
-    padding: 30px 25px 25px;
+    padding: 30px 25px 35px;
   }
 
-  &:hover {
-    display: block;
+  &:hover,
+  &:focus-within {
     overflow: auto;
     background-color: $color-tangaroa;
+    box-shadow: 0 4px 35px rgba(1 28 64 / 15%);
   }
 
   h3 {
-    margin: 0 0 -7px 5px;
+    margin: 0;
     font-size: 18px;
     line-height: 150%;
     font-weight: 500;
     color: $color-alice-blue;
-
-    @media (max-width: $vp-1023) {
-      margin: 0 0 5px 0;
-    }
-
-    @media (max-width: $vp-767) {
-      margin: 0 0 -8px 0;
-    }
+    transform: translateY(336px - 28px);
+    transition: all 0.2s ease;
   }
+}
+
+.product-card:hover h3,
+.product-card:focus-within h3 {
+  margin: 0;
+  transform: none;
+}
+
+.product-card:hover .product-card__holder,
+.product-card:focus-within .product-card__holder {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 294px;
+  height: auto;
+  transform: none;
+}
+
+.product-card__img-holder {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background-color: #344966;
 
   img {
     width: 100%;
@@ -42,29 +60,10 @@
   }
 }
 
-.product-card:hover h3 {
-  margin: 0;
-}
-
-.product-card:hover .product-card__holder {
-  display: block;
-}
-
-
-.product-card__img-holder {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  z-index: -1;
-  height: 386px;
-  background-color: #344966;
-}
-
 .product-card__holder {
-  display: none;
-  padding: 14px 0 5px;
+  padding: 14px 0 0;
+  transform: translateY(386px);
+  transition: all 0.2s ease;
 
   dl {
     margin: 0;
@@ -85,8 +84,4 @@
     line-height: 140%;
     color: $color-alice-blue;
   }
-}
-
-.product-card__button {
-  margin-top: 25px;
 }
