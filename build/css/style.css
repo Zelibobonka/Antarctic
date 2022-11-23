@@ -364,7 +364,7 @@ button,
   background-image: image-set(url("../img/background/desktop/intro.webp") 1x, url("../img/background/desktop/intro@2x.webp") 2x, url("../img/background/desktop/intro.jpg") 1x, url("../img/background/desktop/intro@2x.jpg") 2x);
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: top;
+  background-position: center bottom;
   -webkit-filter: drop-shadow(0 4px 4px rgba(0, 0, 0, 0.25));
   filter: drop-shadow(0 4px 4px rgba(0, 0, 0, 0.25));
 }
@@ -927,6 +927,14 @@ button,
   fill: #f9fbfd;
 }
 
+[class*=map-copyrights-promo] {
+  display: none;
+}
+
+[class*=copyright] {
+  display: none;
+}
+
 @media (max-width: 1249px) {
   :root {
     --side-offset: 45px;
@@ -1169,16 +1177,13 @@ button,
   }
 
   .main-header--open {
-    top: 0;
-    right: 0;
-    left: auto;
     z-index: 3;
-    min-width: 320px;
     margin-left: 35px;
     background-color: #f9fbfd;
     -webkit-transition: 0.4s all;
     -o-transition: 0.4s all;
     transition: 0.4s all;
+    overflow: auto;
   }
 
   .main-header__button--open {

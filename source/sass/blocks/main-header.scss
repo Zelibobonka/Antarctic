@@ -18,14 +18,11 @@
 
   &--open {
     @media (max-width: $vp-767) {
-      top: 0;
-      right: 0;
-      left: auto;
       z-index: 3;
-      min-width: 320px;
       margin-left: 35px;
       background-color: $color-alice-blue;
       transition: 0.4s all;
+      overflow: auto;
     }
   }
 }
