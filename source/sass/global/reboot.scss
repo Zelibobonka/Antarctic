@@ -23,8 +23,27 @@ html {
   -moz-osx-font-smoothing: grayscale;
   text-rendering: optimizeLegibility;
 
+  scrollbar-gutter: stable;
+  scrollbar-color: $color-tangaroa $color-alice-blue;
+  scrollbar-width: thin;
+
   @media (prefers-reduced-motion: no-preference) {
     scroll-behavior: smooth;
+  }
+
+  ::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background-color: $color-alice-blue;
+    border-radius: 4px;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background-color: $color-tangaroa;
+    border-radius: 4px;
   }
 }
 

@@ -1,5 +1,5 @@
 :root {
-  --side-offset: calc(50vw - 580px);
+  --side-offset: calc(50vw - 580px - var(--scrollbarWidth, 0px) * 0.5);
 
   @media (max-width: $vp-1249) {
     --side-offset: 45px;

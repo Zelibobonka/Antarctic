@@ -9,32 +9,26 @@
   <title>Круизы в Антарктику </title>
   <link rel="preload" href="css/style.min.css" as="style">
   <link rel="preload" href="js/main.min.js" as="script">
-  <link rel="preload" href="fonts/montserrat-bold.woff2" as="font">
-  <link rel="preload" href="fonts/montserrat-medium.woff2" as="font">
-  <link rel="preload" href="fonts/montserrat-regular.woff2" as="font">
-  <link rel="preload" href="fonts/montserrat-semibold.woff2" as="font">
+  <link rel="preload" href="fonts/montserrat-cyrillic-variable-wghtOnly-normal.woff2" as="font">
   <link rel="stylesheet" href="css/style.min.css">
 </head>
 
 <body>
   <div class="wrapper">
-    <header class="main-header main-header--open" data-main-header>
+    <header class="main-header main-header--nojs" data-main-header>
       <div class="main-header__menu">
-        <a class="logo logo--menu" href="#" aria-label="Логотип." data-logo-header>
-          <svg width="70" height="38">
+        <a class="logo" href="#" aria-label="Логотип.">
+          <svg class="logo__icon" width="70" height="38">
             <use xlink:href="img/sprite.svg#main-logo"></use>
           </svg>
         </a>
 
-        <button class="main-header__button main-header__button--open" type="button" aria-label="Открыть меню."
+        <button class="main-header__button" type="button" aria-label="Открыть меню."
           data-open-menu></button>
-
-        <button class="main-header__button main-header__button--close" type="button" aria-label="Закрыть меню."
-          data-close-menu></button>
       </div>
 
 
-      <nav class="main-nav" data-header-nav>
+      <nav class="main-nav">
         <ul class="main-nav__list">
           <li class="main-nav__item">
             <a class="main-nav__link" href="#advantages" data-nav-link>Преимущества</a>
@@ -98,212 +92,180 @@
       <section class="service" id="service">
         <h2 class="service__title">Ближайшие круизы</h2>
         <ul class="service__list">
-          <li class="service__item">
-            <div class="product-card">
-              <div class="product-card__img-holder">
-                <picture>
-                  <source type="image/webp" srcset="img/product/product-1.webp 1x, img/product/product-1@2x.webp 2x">
-                  <img src="img/product/product-1.jpg" srcset="img/product/product-1@2x.jpg 2x" loading="lazy"
-                    width="260" height="386" alt="Круиз Астория." />
-                </picture>
-              </div>
-              <h3>Круиз "Астория"</h3>
-              <div class="product-card__holder">
-                <dl>
-                  <dt>Маршрут</dt>
-                  <dd>Аргентина - Фолклендские острова - Антарктида</dd>
-                  <dt>Порт отправления</dt>
-                  <dd>Ушуайя</dd>
-                  <dt>Продолжительность</dt>
-                  <dd>11 дней</dd>
-                  <dt>Цена</dt>
-                  <dd>от 11500 $</dd>
-                </dl>
-                <a class="product-card__button btn" href="#">Забронировать</a>
-              </div>
+          <li class="service__item product-card">
+            <picture>
+              <source type="image/webp" srcset="img/product/product-1.webp 1x, img/product/product-1@2x.webp 2x">
+              <img class="product-card__img" src="img/product/product-1.jpg"
+                srcset="img/product/product-1@2x.jpg 2x" loading="lazy" width="260" height="386" alt="Круиз Астория." />
+            </picture>
+            <h3>Круиз "Астория"</h3>
+            <div class="product-card__holder">
+              <dl>
+                <dt>Маршрут</dt>
+                <dd>Аргентина - Фолклендские острова - Антарктида</dd>
+                <dt>Порт отправления</dt>
+                <dd>Ушуайя</dd>
+                <dt>Продолжительность</dt>
+                <dd>11 дней</dd>
+                <dt>Цена</dt>
+                <dd>от 11500 $</dd>
+              </dl>
             </div>
+            <a class="product-card__button btn" href="#">Забронировать</a>
           </li>
 
-          <li class="service__item">
-            <div class="product-card">
-              <div class="product-card__img-holder">
-                <picture>
-                  <source type="image/webp" srcset="img/product/product-1.webp 1x, img/product/product-1@2x.webp 2x">
-                  <img src="img/product/product-1.jpg" srcset="img/product/product-1@2x.jpg 2x" loading="lazy"
-                    width="260" height="386" alt="Круиз Астория." />
-                </picture>
-              </div>
-              <h3>Круиз “Элайн”</h3>
-              <div class="product-card__holder">
-                <dl>
-                  <dt>Маршрут</dt>
-                  <dd>Аргентина - Фолклендские острова - Антарктида - Чили</dd>
-                  <dt>Порт отправления</dt>
-                  <dd>Буэнос-Айрес</dd>
-                  <dt>Продолжительность</dt>
-                  <dd>20 дней</dd>
-                  <dt>Цена</dt>
-                  <dd>от 14500 $</dd>
-                </dl>
-                <a class="product-card__button btn" href="#">Забронировать</a>
-              </div>
+          <li class="service__item product-card">
+            <picture>
+              <source type="image/webp" srcset="img/product/product-1.webp 1x, img/product/product-1@2x.webp 2x">
+              <img class="product-card__img" src="img/product/product-1.jpg"
+                srcset="img/product/product-1@2x.jpg 2x" loading="lazy" width="260" height="386" alt="Круиз Астория." />
+            </picture>
+            <h3>Круиз “Элайн”</h3>
+            <div class="product-card__holder">
+              <dl>
+                <dt>Маршрут</dt>
+                <dd>Аргентина - Фолклендские острова - Антарктида - Чили</dd>
+                <dt>Порт отправления</dt>
+                <dd>Буэнос-Айрес</dd>
+                <dt>Продолжительность</dt>
+                <dd>20 дней</dd>
+                <dt>Цена</dt>
+                <dd>от 14500 $</dd>
+              </dl>
             </div>
+            <a class="product-card__button btn" href="#">Забронировать</a>
           </li>
 
-          <li class="service__item">
-            <div class="product-card">
-              <div class="product-card__img-holder">
-                <picture>
-                  <source type="image/webp" srcset="img/product/product-2.webp 1x, img/product/product-2@2x.webp 2x">
-                  <img src="img/product/product-2.jpg" srcset="img/product/product-2@2x.jpg 2x" loading="lazy"
-                    width="260" height="386" alt="Круиз Астория." />
-                </picture>
-              </div>
-              <h3>Круиз "Атлантис"</h3>
-              <div class="product-card__holder">
-                <dl>
-                  <dt>Маршрут</dt>
-                  <dd>Аргентина - Южная Георгия и Южные Сандвичевы Острова - Антарктида</dd>
-                  <dt>Порт отправления</dt>
-                  <dd>Ушуайя</dd>
-                  <dt>Продолжительность</dt>
-                  <dd>15 дней</dd>
-                  <dt>Цена</dt>
-                  <dd>от 14500 $</dd>
-                </dl>
-                <a class="product-card__button btn" href="#">Забронировать</a>
-              </div>
+          <li class="service__item product-card">
+            <picture>
+              <source type="image/webp" srcset="img/product/product-2.webp 1x, img/product/product-2@2x.webp 2x">
+              <img class="product-card__img" src="img/product/product-2.jpg"
+                srcset="img/product/product-2@2x.jpg 2x" loading="lazy" width="260" height="386" alt="Круиз Астория." />
+            </picture>
+            <h3>Круиз "Атлантис"</h3>
+            <div class="product-card__holder">
+              <dl>
+                <dt>Маршрут</dt>
+                <dd>Аргентина - Южная Георгия и Южные Сандвичевы Острова - Антарктида</dd>
+                <dt>Порт отправления</dt>
+                <dd>Ушуайя</dd>
+                <dt>Продолжительность</dt>
+                <dd>15 дней</dd>
+                <dt>Цена</dt>
+                <dd>от 14500 $</dd>
+              </dl>
             </div>
+            <a class="product-card__button btn" href="#">Забронировать</a>
           </li>
 
-          <li class="service__item">
-            <div class="product-card">
-              <div class="product-card__img-holder">
-                <picture>
-                  <source type="image/webp" srcset="img/product/product-3.webp 1x, img/product/product-3@2x.webp 2x">
-                  <img src="img/product/product-3.jpg" srcset="img/product/product-3@2x.jpg 2x" loading="lazy"
-                    width="260" height="386" alt="Круиз Астория." />
-                </picture>
-              </div>
-              <h3>Круиз "Одиссей"</h3>
-              <div class="product-card__holder">
-                <dl>
-                  <dt>Маршрут</dt>
-                  <dd>Чили - Антарктида</dd>
-                  <dt>Порт отправления</dt>
-                  <dd>Пунта-Аренас</dd>
-                  <dt>Продолжительность</dt>
-                  <dd>13 дней</dd>
-                  <dt>Цена</dt>
-                  <dd>от 9700 $</dd>
-                </dl>
-                <a class="product-card__button btn" href="#">Забронировать</a>
-              </div>
+          <li class="service__item product-card">
+            <picture>
+              <source type="image/webp" srcset="img/product/product-3.webp 1x, img/product/product-3@2x.webp 2x">
+              <img class="product-card__img" src="img/product/product-3.jpg"
+                srcset="img/product/product-3@2x.jpg 2x" loading="lazy" width="260" height="386" alt="Круиз Астория." />
+            </picture>
+            <h3>Круиз "Одиссей"</h3>
+            <div class="product-card__holder">
+              <dl>
+                <dt>Маршрут</dt>
+                <dd>Чили - Антарктида</dd>
+                <dt>Порт отправления</dt>
+                <dd>Пунта-Аренас</dd>
+                <dt>Продолжительность</dt>
+                <dd>13 дней</dd>
+                <dt>Цена</dt>
+                <dd>от 9700 $</dd>
+              </dl>
             </div>
+            <a class="product-card__button btn" href="#">Забронировать</a>
           </li>
 
-          <li class="service__item">
-            <div class="product-card">
-              <div class="product-card__img-holder">
-                <picture>
-                  <source type="image/webp" srcset="img/product/product-4.webp 1x, img/product/product-4@2x.webp 2x">
-                  <img src="img/product/product-4.jpg" srcset="img/product/product-4@2x.jpg 2x" loading="lazy"
-                    width="260" height="386" alt="Круиз Астория." />
-                </picture>
-              </div>
-              <h3>Круиз "Олимпия"</h3>
-              <div class="product-card__holder">
-                <dl>
-                  <dt>Маршрут</dt>
-                  <dd>Аргентина - Фолклендские острова - Южная Георгия - Антарктида</dd>
-                  <dt>Порт отправления</dt>
-                  <dd>Ушуайя</dd>
-                  <dt>Продолжительность</dt>
-                  <dd>21 день</dd>
-                  <dt>Цена</dt>
-                  <dd>от 18600 $</dd>
-                </dl>
-                <a class="product-card__button btn" href="#">Забронировать</a>
-              </div>
+          <li class="service__item product-card">
+            <picture>
+              <source type="image/webp" srcset="img/product/product-4.webp 1x, img/product/product-4@2x.webp 2x">
+              <img class="product-card__img" src="img/product/product-4.jpg"
+                srcset="img/product/product-4@2x.jpg 2x" loading="lazy" width="260" height="386" alt="Круиз Астория." />
+            </picture>
+            <h3>Круиз "Олимпия"</h3>
+            <div class="product-card__holder">
+              <dl>
+                <dt>Маршрут</dt>
+                <dd>Аргентина - Фолклендские острова - Южная Георгия - Антарктида</dd>
+                <dt>Порт отправления</dt>
+                <dd>Ушуайя</dd>
+                <dt>Продолжительность</dt>
+                <dd>21 день</dd>
+                <dt>Цена</dt>
+                <dd>от 18600 $</dd>
+              </dl>
             </div>
+            <a class="product-card__button btn" href="#">Забронировать</a>
           </li>
 
-          <li class="service__item">
-            <div class="product-card">
-              <div class="product-card__img-holder">
-                <picture>
-                  <source type="image/webp" srcset="img/product/product-5.webp 1x, img/product/product-5@2x.webp 2x">
-                  <img src="img/product/product-5.jpg" srcset="img/product/product-5@2x.jpg 2x" loading="lazy"
-                    width="260" height="386" alt="Круиз Астория." />
-                </picture>
-              </div>
-              <h3>Круиз "Аврора"</h3>
-              <div class="product-card__holder">
-                <dl>
-                  <dt>Маршрут</dt>
-                  <dd>Аргентина - Антарктида - Чили</dd>
-                  <dt>Порт отправления</dt>
-                  <dd>Ушуайя</dd>
-                  <dt>Продолжительность</dt>
-                  <dd>14 дней</dd>
-                  <dt>Цена</dt>
-                  <dd>от 11700 $</dd>
-                </dl>
-                <a class="product-card__button btn" href="#">Забронировать</a>
-              </div>
+          <li class="service__item product-card">
+            <picture>
+              <source type="image/webp" srcset="img/product/product-5.webp 1x, img/product/product-5@2x.webp 2x">
+              <img class="product-card__img" src="img/product/product-5.jpg"
+                srcset="img/product/product-5@2x.jpg 2x" loading="lazy" width="260" height="386" alt="Круиз Астория." />
+            </picture>
+            <h3>Круиз "Аврора"</h3>
+            <div class="product-card__holder">
+              <dl>
+                <dt>Маршрут</dt>
+                <dd>Аргентина - Антарктида - Чили</dd>
+                <dt>Порт отправления</dt>
+                <dd>Ушуайя</dd>
+                <dt>Продолжительность</dt>
+                <dd>14 дней</dd>
+                <dt>Цена</dt>
+                <dd>от 11700 $</dd>
+              </dl>
             </div>
+            <a class="product-card__button btn" href="#">Забронировать</a>
           </li>
 
-          <li class="service__item">
-            <div class="product-card">
-              <div class="product-card__img-holder">
-                <picture>
-                  <source type="image/webp" srcset="img/product/product-6.webp 1x, img/product/product-6@2x.webp 2x">
-                  <img src="img/product/product-6.jpg" srcset="img/product/product-6@2x.jpg 2x" loading="lazy"
-                    width="260" height="386" alt="Круиз Астория." />
-                </picture>
-              </div>
-              <h3>Круиз "Леонор"</h3>
-              <div class="product-card__holder">
-                <dl>
-                  <dt>Маршрут</dt>
-                  <dd>Чили - Южная Георгия - Антарктида - Аргентина</dd>
-                  <dt>Порт отправления</dt>
-                  <dd>Пунта-Аренас</dd>
-                  <dt>Продолжительность</dt>
-                  <dd>17 дней</dd>
-                  <dt>Цена</dt>
-                  <dd>от 12500 $</dd>
-                </dl>
-                <a class="product-card__button btn" href="#">Забронировать</a>
-              </div>
+          <li class="service__item product-card">
+            <picture>
+              <source type="image/webp" srcset="img/product/product-6.webp 1x, img/product/product-6@2x.webp 2x">
+              <img class="product-card__img" src="img/product/product-6.jpg"
+                srcset="img/product/product-6@2x.jpg 2x" loading="lazy" width="260" height="386" alt="Круиз Астория." />
+            </picture>
+            <h3>Круиз "Леонор"</h3>
+            <div class="product-card__holder">
+              <dl>
+                <dt>Маршрут</dt>
+                <dd>Чили - Южная Георгия - Антарктида - Аргентина</dd>
+                <dt>Порт отправления</dt>
+                <dd>Пунта-Аренас</dd>
+                <dt>Продолжительность</dt>
+                <dd>17 дней</dd>
+                <dt>Цена</dt>
+                <dd>от 12500 $</dd>
+              </dl>
             </div>
+            <a class="product-card__button btn" href="#">Забронировать</a>
           </li>
 
-          <li class="service__item">
-            <div class="product-card">
-              <div class="product-card__img-holder">
-                <picture>
-                  <source type="image/webp" srcset="img/product/product-7.webp 1x, img/product/product-7@2x.webp 2x">
-                  <img src="img/product/product-7.jpg" srcset="img/product/product-7@2x.jpg 2x" loading="lazy"
-                    width="260" height="386" alt="Круиз Астория." />
-                </picture>
-              </div>
-              <h3>Круиз "Минион - 1"</h3>
-              <div class="product-card__holder">
-                <dl>
-                  <dt>Маршрут</dt>
-                  <dd>Аргентина - Антарктида</dd>
-                  <dt>Порт отправления</dt>
-                  <dd>Ушуайя</dd>
-                  <dt>Продолжительность</dt>
-                  <dd>11 дней</dd>
-                  <dt>Цена</dt>
-                  <dd>от 12300 $</dd>
-                </dl>
-                <a class="product-card__button btn" href="#">Забронировать</a>
-              </div>
+          <li class="service__item product-card">
+            <picture>
+              <source type="image/webp" srcset="img/product/product-7.webp 1x, img/product/product-7@2x.webp 2x">
+              <img class="product-card__img" src="img/product/product-7.jpg"
+                srcset="img/product/product-7@2x.jpg 2x" loading="lazy" width="260" height="386" alt="Круиз Астория." />
+            </picture>
+            <h3>Круиз "Минион - 1"</h3>
+            <div class="product-card__holder">
+              <dl>
+                <dt>Маршрут</dt>
+                <dd>Аргентина - Антарктида</dd>
+                <dt>Порт отправления</dt>
+                <dd>Ушуайя</dd>
+                <dt>Продолжительность</dt>
+                <dd>11 дней</dd>
+                <dt>Цена</dt>
+                <dd>от 12300 $</dd>
+              </dl>
             </div>
+            <a class="product-card__button btn" href="#">Забронировать</a>
           </li>
         </ul>
       </section>
@@ -355,13 +317,13 @@
 
     <footer class="main-footer">
       <a class="logo logo--footer" href="#" aria-label="Логотип.">
-        <svg width="70" height="38">
+        <svg class="logo__icon" width="70" height="38">
           <use xlink:href="img/sprite.svg#main-logo"></use>
         </svg>
       </a>
 
       <nav class="main-nav">
-        <ul class="main-nav__list">
+        <ul class="main-nav__list main-nav__list--footer">
           <li class="main-nav__item main-nav__item--footer">
             <a class="main-nav__link main-nav__link--footer" href="#">Преимущества</a>
           </li>

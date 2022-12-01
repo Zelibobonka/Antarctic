@@ -17,7 +17,7 @@
 
 .service__list {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
   gap: 30px;
   margin: 0;
   padding: 0;

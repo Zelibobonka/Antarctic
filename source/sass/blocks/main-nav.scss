@@ -6,8 +6,15 @@
   list-style-type: none;
 
   @media (max-width: $vp-767) {
-    display: block;
+    display: none;
     margin-left: -5px;
+  }
+
+  &--footer {
+    @media (max-width: $vp-767) {
+      display: block;
+      height: 100%;
+    }
   }
 }
 

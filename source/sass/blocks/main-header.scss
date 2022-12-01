@@ -19,10 +19,50 @@
   &--open {
     @media (max-width: $vp-767) {
       z-index: 3;
+      height: 100vh;
       margin-left: 35px;
       background-color: $color-alice-blue;
       transition: 0.4s all;
       overflow: auto;
+
+      .logo__icon {
+        fill: $color-tangaroa;
+      }
+
+      .main-header__button {
+        width: 25px;
+        height: 25px;
+        background-image: url("../img/svg/icon-close.svg");
+      }
+
+      .main-nav__list {
+        display: block;
+      }
+    }
+  }
+
+  &--nojs {
+    @media (max-width: $vp-767) {
+      position: static;
+
+      .logo__icon {
+        fill: $color-tangaroa;
+      }
+
+      .main-header__button {
+        width: 25px;
+        height: 25px;
+        background-image: url("../img/svg/icon-close.svg");
+      }
+
+      .main-nav__list {
+        display: block;
+        height: 100%;
+      }
+
+      .main-nav__link {
+        color: $color-tangaroa;
+      }
     }
   }
 }
@@ -44,20 +84,10 @@
     opacity: 0.6;
   }
 
-  &--open {
-    @media (max-width: $vp-767) {
-      width: 34px;
-      height: 24px;
-      background-image: url("../img/svg/icon-open.svg");
-    }
-  }
-
-  &--close {
-    @media (max-width: $vp-767) {
-      display: block;
-      width: 25px;
-      height: 25px;
-      background-image: url("../img/svg/icon-close.svg");
-    }
+  @media (max-width: $vp-767) {
+    display: block;
+    width: 34px;
+    height: 24px;
+    background-image: url("../img/svg/icon-open.svg");
   }
 }

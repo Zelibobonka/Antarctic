@@ -12,40 +12,29 @@
   }
 
   &--footer {
+    margin-right: 0;
+
     @media (max-width: $vp-1023) {
       margin-right: 0;
     }
 
     @media (max-width: $vp-767) {
-      margin-bottom: 19px;
-    }
-  }
-
-  svg {
-    fill: $color-alice-blue;
-
-    @media (max-width: $vp-1023) {
-      width: 38px;
-      height: 20px;
-    }
-
-    @media (max-width: $vp-767) {
-      width: 42px;
-      height: 22px;
-    }
-  }
-
-  &--menu {
-    height: 38px;
-
-    @media (max-width: $vp-1023) {
-      height: 20px;
-    }
-
-    svg {
-      @media (max-width: $vp-767) {
-        fill: $color-tangaroa;
-      }
+      margin-bottom: 22px;
     }
   }
 }
+
+.logo__icon {
+  fill: $color-alice-blue;
+
+  @media (max-width: $vp-1023) {
+    width: 38px;
+    height: 20px;
+  }
+
+  @media (max-width: $vp-767) {
+    width: 42px;
+    height: 22px;
+  }
+}
+
