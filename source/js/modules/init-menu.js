@@ -8,15 +8,19 @@ const initMenu = () => {
   header.classList.remove('main-header--nojs');
 
   buttonOpen.addEventListener('click', () => {
-    header.classList.toggle('main-header--open');
-    overlay.classList.toggle('active');
-    document.body.style.overflow = 'hidden';
-
     const close = () => {
       header.classList.remove('main-header--open');
       overlay.classList.remove('active');
       document.body.style.overflow = '';
     };
+
+    if (!header.classList.contains('main-header--open')) {
+      header.classList.add('main-header--open');
+      overlay.classList.add('active');
+      document.body.style.overflow = 'hidden';
+    } else {
+      close();
+    }
 
     navLink.forEach((elem) => {
       elem.addEventListener('click', () => {
