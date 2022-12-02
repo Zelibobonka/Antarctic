@@ -1,6 +1,6 @@
 import {iosVhFix} from './utils/ios-vh-fix';
 import {initMenu} from './modules/init-menu';
-import './modules/map';
+import {createMap} from './modules/map';
 
 
 window.addEventListener('DOMContentLoaded', () => {
@@ -10,6 +10,5 @@ window.addEventListener('DOMContentLoaded', () => {
   document.documentElement.style.setProperty('--scrollbarWidth',
       `${window.innerWidth - document.body.clientWidth}px`);
 
-  window.addEventListener('load', () => {
-  });
+  window.addEventListener('load', createMap);
 });

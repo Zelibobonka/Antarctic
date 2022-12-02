@@ -31,4 +31,4 @@ const createMap = () => {
   }
 };
 
-setTimeout(createMap, 4000);
+export {createMap};
