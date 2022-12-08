@@ -542,7 +542,7 @@ button,
 .product-card {
   position: relative;
   height: 386px;
-  padding: 28px 25px 35px 25px;
+  padding: 28px 25px 35px;
   overflow: hidden;
   -webkit-transition: all 0.2s easy-in;
   -o-transition: all 0.2s easy-in;
@@ -920,14 +920,6 @@ button,
 
 .social__link svg {
   fill: #f9fbfd;
-}
-
-[class*=map-copyrights-promo] {
-  display: none;
-}
-
-[class*=copyright] {
-  display: none;
 }
 
 @media (max-width: 1249px) {
