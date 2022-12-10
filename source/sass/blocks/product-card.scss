@@ -1,16 +1,19 @@
 .product-card {
   position: relative;
-  height: 386px;
+  display: flex;
+  flex-direction: column;
   padding: 28px 25px 35px;
   overflow: hidden;
-  transition: all 0.2s easy-in;
+  aspect-ratio: 260 / 386;
 
   @media (max-width: $vp-1023) {
     padding: 27px 35px 35px;
+    aspect-ratio: 309 / 386;
   }
 
   @media (max-width: $vp-767) {
     padding: 30px 25px 35px;
+    aspect-ratio: 270 / 386;
   }
 
   &:hover,
@@ -21,32 +24,44 @@
 
   h3 {
     margin: 0 0 0 5px;
+    margin-top: auto;
     font-size: 18px;
     line-height: 150%;
     font-weight: 500;
     color: $color-alice-blue;
-    transform: translateY(336px - 28px);
+    transform: translateY(53px);
     transition: all 0.2s ease;
 
     @media (max-width: $vp-1023) {
       margin: 0;
-      transform: translateY(330px - 28px);
+      margin-top: auto;
+      transform: translateY(47px);
     }
 
     @media (max-width: $vp-767) {
-      transform: translateY(340px - 28px);
+      transform: translateY(59px);
     }
   }
 }
 
 .product-card:hover h3,
-.product-card:focus-within h3,
-.product-card:hover .product-card__holder,
-.product-card:focus-within .product-card__holder,
-.product-card:hover .product-card__button,
-.product-card:focus-within .product-card__button {
+.product-card:focus-within h3 {
   margin: 0;
   transform: none;
+  transition: all 0.1s linear;
+}
+
+.product-card:hover .product-card__holder,
+.product-card:focus-within .product-card__holder {
+  display: block;
+  animation: appearLeft 0.1s linear;
+}
+
+.product-card:hover .product-card__button,
+.product-card:focus-within .product-card__button {
+  margin-top: auto;
+  transform: none;
+  transition: all 0.1s linear;
 }
 
 .product-card__img {
@@ -60,10 +75,8 @@
 }
 
 .product-card__holder {
-  height: 255px;
+  display: none;
   padding: 14px 0 0;
-  transform: translateY(386px);
-  transition: all 0.2s ease;
   overflow: auto;
 
   dl {
@@ -88,6 +101,15 @@
 }
 
 .product-card__button {
-  transform: translateY(386px);
-  transition: all 0.2s ease;
+  transform: translateY(100px);
+}
+
+@keyframes appearLeft {
+  from {
+    transform: translateY(100px);
+  }
+
+  to {
+    transform: none;
+  }
 }

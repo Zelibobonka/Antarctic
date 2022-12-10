@@ -2,7 +2,7 @@
   min-height: 650px;
   margin: 0 auto;
   padding: 276px calc(var(--side-offset) + 95px) 40px calc(var(--side-offset) + 95px);
-  background: linear-gradient($color-tangaroa 20%, $color-alice-blue);
+  background-color: $color-tangaroa;
   background-image: image-set(
     url("../img/background/desktop/intro.webp") 1x,
     url("../img/background/desktop/intro@2x.webp") 2x,

@@ -22,12 +22,4 @@
   margin: 0;
   padding: 0;
   list-style-type: none;
-
-  @media (max-width: $vp-1023) {
-    grid-template-columns: 1fr 1fr;
-  }
-
-  @media (max-width: $vp-767) {
-    grid-template-columns: 1fr;
-  }
 }
